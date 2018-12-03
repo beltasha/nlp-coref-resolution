@@ -1,6 +1,6 @@
-
 from nltk.tokenize import sent_tokenize
 import en_coref_lg
+import en_coref_md
 import gensim
 from gensim.models.word2vec import LineSentence
 
@@ -17,7 +17,8 @@ def get_splitted_text(text, sentence_count=1):
     for sentence in sentence_list:
         if inner_counter == sentence_count:
             paragraph_list.append(temp_paragraph)
-            temp_paragraph = "" 
+            temp_paragraph = ""
+            inner_counter = 0
         
         temp_paragraph += sentence + " "
         inner_counter += 1
@@ -40,9 +41,14 @@ def train_and_save_model(book_name):
 def replace_corefs(paragraph_list):
     nlp = en_coref_lg.load()
     result_text = ""
+    paragraphs_len = len(paragraph_list)
+    print("Replacing corefs... Total number of paragraphs: " + str(paragraphs_len))
+    counter = 1
     for paragraph in paragraph_list:
+        print("Processing paragraph " + str(counter) + "/" + str(paragraphs_len))
         spacy_result = nlp(paragraph)
         result_text += spacy_result._.coref_resolved + " "
+        counter += 1
     return result_text
 
 
@@ -58,20 +64,18 @@ def coref_replacing(book_text, book_name, sentence_count=1):
 
 if __name__ == "__main__":
     # split data
-    text_hp = open('book_combined_sentences.txt', 'r', encoding='utf8').read()
-    text_soiaf = open('soiaf4books.txt', 'r', encoding='utf8').read()
+    # text_hp = open('cleaned_hp.txt', 'r', encoding='utf8').read()
+    text_soiaf = open('cleaned_soiaf.txt', 'r', encoding='utf8').read()
 
-    paragraph_list = get_splitted_text(text_hp)
-    print(paragraph_list[0])
-    paragraph_list = get_splitted_text(text_hp, 5)
-    print(paragraph_list[0])
-
-    print(paragraph_list[:10])
-    print(replace_corefs(paragraph_list)[:1000])
     #train on hp_book
-    coref_replacing(text_hp, "hp")
-    train_and_save_model("hp")
+    # coref_replacing(text_hp, "1_sent_hp", sentence_count=1)
+    # train_and_save_model("1_sent_hp")
+    # coref_replacing(text_hp, "4_sent_hp", sentence_count=4)
+    # train_and_save_model("4_sent_hp")
+
     #train on soiaf
-    coref_replacing(text_soiaf, "soiaf")
-    train_and_save_model("soiaf")
+    # coref_replacing(text_soiaf, "1_sent_soiaf", sentence_count=1)
+    # train_and_save_model("1_sent_soiaf")
+    coref_replacing(text_soiaf, "4_sent_soiaf", sentence_count=4)
+    train_and_save_model("4_sent_soiaf")
 
