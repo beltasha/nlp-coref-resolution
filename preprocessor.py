@@ -1,23 +1,18 @@
 import nltk
-from nltk.stem.wordnet import WordNetLemmatizer
 
 def preprocess(input_file, output_file):
-    lmtzr = WordNetLemmatizer()
-    tokenize_sentences = nltk.sent_tokenize(open(input_file, encoding= 'utf - 8').read())
-    result = ""
-    for sentence in tokenize_sentences:
-        words_raw = nltk.word_tokenize(sentence)
-        words = [word for word in words_raw if word.isalpha()]
-        if len(words) > 0:
-            clear_sentence = ''
-            for word in words:
-                clear_sentence += lmtzr.lemmatize(word) + ' '
+    with open(input_file, encoding='utf-8') as input:
+        text = input.read()
+    filtered_sentences = []
+    sentences = nltk.sent_tokenize(text)
+    for sentence in sentences:
+        tokens = nltk.word_tokenize(sentence)
+        if len(tokens) > 0:
+            filtered_sentences.append(' '.join(tokens))
 
-            clear_sentence = clear_sentence.strip() + '. '
-            result += clear_sentence
-
-    clear_file = open(output_file,'wt', encoding='utf-8')
-    clear_file.writelines(result)
+    output = open(output_file, 'wt', encoding='UTF8')
+    output.writelines(sentence + '.\n' for sentence in filtered_sentences)
+    output.close()
 
 if __name__ == "__main__":
     preprocess("book_combined_sentences.txt", "cleaned_hp.txt")
