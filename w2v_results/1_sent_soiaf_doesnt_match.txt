@@ -1,0 +1,225 @@
+{'': 6845091, 'Karstark': 98, 'Victarion': 168, 'Balon': 252, 'Greyjoy': 240, 'Florent': 66, '::': 0, 'Baratheon': 239, 'Dorne': 125, 'direwolve': 57, 'Trident': 184, 'Frey': 456, 'wood': 1490, 'Tyrion': 1997, 'Margaery': 295, 'Tyros': 75, 'Ramsay': 10, 'Harrenhal': 279, 'Craster': 182, 'Lancel': 143, 'Kevan': 168, 'food': 268, 'Varys': 384, 'Bay': 52, 'Walgrave': 20, 'Sam': 1013, 'Lys': 441, 'Tywin': 613, 'Myr': 374, 'Damphair': 59, 'Catelyn': 1099, 'Mormont': 414, 'Mya': 78, 'Littlefinger': 319, 'Ned': 950, 'Mander': 89, 'lion': 638, 'Marwyn': 24, 'Robb': 1040, 'Jon': 2232, 'Shaggydog': 36, 'Obara': 29, 'Norvos': 22, 'sun': 607, 'Braavos': 162, 'Tarly': 191, 'Lyanna': 41, 'Umber': 55, 'Loras': 249, 'Ebrose': 7, 'Bronn': 289, 'water': 1232, 'Winterfell': 708, 'Rhaegar': 168, 'Sansa': 1349, 'Cersei': 1059, 'Doran': 88, 'Targaryen': 186, 'Maron': 9, 'Robert': 985, 'Stark': 1139, 'Euron': 101, 'Drogon': 52, 'Westeros': 144, 'fight': 701, 'Roose': 94, 'Balerion': 32, 'Lannisport': 57, 'Asha': 162, 'Tyene': 31, 'Pentos': 65, 'Bolton': 250, 'Bran': 1361, 'Viserion': 24, 'Tyrell': 394, 'Elia': 59, 'Oberyn': 123, 'Oldtown': 158, 'Pyke': 137, 'Hodor': 350, 'Joanna': 9, 'Quellon': 19, 'raven': 464, 'Jaime': 1425, 'Luwin': 258, 'Theon': 537, 'Daenerys': 78, 'Aegon': 160, 'Volantis': 16, 'Podrick': 140, 'Samwell': 86, 'Highgarden': 166, 'read': 1105, 'Joffrey': 802, 'sword': 2121, 'Rhoyne': 7, 'Rickon': 180, 'Ghost': 235, 'Gulltown': 25, 'Gendry': 243, 'Arys': 92, 'drink': 301, 'Arya': 1500, 'Viserys': 175, 'Myrcella': 170, 'Martell': 86, 'Nymeria': 54, 'Drogo': 324, 'Rhaegal': 21, 'Aeron': 138, 'Tommen': 310, 'dragon': 739, 'Lannister': 1148, 'Aemon': 301}
+
+
+**** Model: 1_sent_soiaf_model  binary?: False
+**** Model: 1_sent_soiaf_model  LOADED
+
+
+
+Total values of accuracy per **difficulty** category for: 1_sent_soiaf_model
+              found_tf   correct_tf      avg_tf   correct
+difficulty                                               
+1           848.616100  1121.956351  595.657692  0.517710
+2           360.460823   306.456172  391.782648  0.592487
+3           284.036852   197.723435  364.599463  0.620394
+4           808.697317   869.367442  532.510465  0.823971
+
+Deeper look into difficulty data, here only check out data for difficulty level: 1
+task_type
+: Greyjoy clan        175
+: Lannister clan      175
+: Stark clan          280
+: Targaryen clan       50
+: Westeros cities      20
+: archmaesters          5
+: bastards             25
+: direwolves            5
+: dragons              20
+: family-siblings      40
+: free cities         175
+: names-of-houses    1820
+: rivers                5
+Name: correct, dtype: int64
+                      found_tf  correct_tf      avg_tf   correct
+task_type                                                       
+: Greyjoy clan     1032.240000    1093.600  420.935714  0.851429
+: Lannister clan   1111.554286    1093.600  853.471429  0.925714
+: Stark clan        889.825000     609.400  857.350000  0.560714
+: Targaryen clan   1091.820000    1093.600  374.350000  0.980000
+: Westeros cities   220.650000     211.600  129.025000  0.500000
+: archmaesters      341.200000     341.200   98.050000  1.000000
+: bastards         1335.760000     961.400  630.750000  0.400000
+: direwolves       1253.200000    1478.400  450.850000  0.800000
+: dragons           139.800000     139.800   59.137500  1.000000
+: family-siblings   838.425000     628.675  864.731250  0.500000
+: free cities       221.051429      90.000  146.250000  0.342857
+: names-of-houses   863.313736    1344.000  604.446429  0.438462
+: rivers            189.800000     131.600  102.900000  0.600000
+
+Deeper look into difficulty data, here check out data for all difficulty levels
+                                 found_tf    ...      correct
+task_type         difficulty                 ...             
+: Greyjoy clan    1           1032.240000    ...     0.851429
+                  2            598.360000    ...     0.965714
+                  3            232.605714    ...     0.914286
+                  4            990.000000    ...     1.000000
+: Lannister clan  1           1111.554286    ...     0.925714
+                  2            514.057143    ...     0.908571
+                  3            252.782857    ...     0.982857
+                  4            990.000000    ...     1.000000
+: Stark clan      1            889.825000    ...     0.560714
+                  2            673.842857    ...     0.725000
+                  3            120.925000    ...     0.989286
+                  4            985.853571    ...     0.992857
+: Targaryen clan  1           1091.820000    ...     0.980000
+                  2            597.320000    ...     0.960000
+                  3            226.660000    ...     0.980000
+                  4            990.000000    ...     1.000000
+: Westeros cities 1            220.650000    ...     0.500000
+                  2            166.500000    ...     0.700000
+                  3             72.800000    ...     1.000000
+                  4            911.000000    ...     0.800000
+: archmaesters    1            341.200000    ...     1.000000
+                  2            258.600000    ...     1.000000
+                  3            286.200000    ...     1.000000
+                  4           1037.400000    ...     1.000000
+: bastards        1           1335.760000    ...     0.400000
+                  2            899.120000    ...     0.600000
+                  3            598.560000    ...     0.600000
+                  4            984.320000    ...     0.760000
+: direwolves      1           1253.200000    ...     0.800000
+                  2            253.600000    ...     1.000000
+                  3            420.600000    ...     1.000000
+                  4           1118.200000    ...     1.000000
+: dragons         1            139.800000    ...     1.000000
+                  2            910.800000    ...     1.000000
+                  3            184.200000    ...     1.000000
+                  4            964.500000    ...     0.950000
+: family-siblings 1            838.425000    ...     0.500000
+                  2            483.500000    ...     0.925000
+                  3            288.925000    ...     0.975000
+                  4            826.950000    ...     0.925000
+: free cities     1            221.051429    ...     0.342857
+                  2            326.714286    ...     0.680000
+                  3            412.600000    ...     1.000000
+                  4            925.737143    ...     0.800000
+: names-of-houses 1            863.313736    ...     0.438462
+                  2            257.860440    ...     0.470879
+                  3            304.552198    ...     0.435165
+                  4            722.921429    ...     0.758242
+: rivers          1            189.800000    ...     0.600000
+                  2            373.400000    ...     1.000000
+                  3            412.600000    ...     1.000000
+                  4            915.000000    ...     0.800000
+
+[52 rows x 4 columns]
+
+df.describe -- closer statistical look at global data
+           found_tf    correct_tf        avg_tf       correct
+count  11180.000000  11180.000000  11180.000000  11180.000000
+mean     575.452773    623.875850    471.137567      0.638640
+std      575.824943    610.523807    272.694711      0.480416
+min        9.000000      7.000000     15.250000      0.000000
+25%      186.000000    170.000000    249.500000      0.000000
+50%      384.000000    384.000000    435.750000      1.000000
+75%      708.000000    950.000000    637.000000      1.000000
+max     2232.000000   2232.000000   1678.250000      1.000000
+Number of categories 13
+correlation between difficulty and correct result 0.22032564451983558
+correlation between correct-term frequency and correctness 0.11799782496048725
+correlation between   found-term frequency and correctness 0.2369077755099688
+correlation between average term frequency and correctness 0.13046185194799245
+correlation between frequency bin and correctness 0.19716132547306706
+correlation between avg_frequency bin and correctness 0.11129546715003663
+
+***************************************************Total values of accuracy per **tf_category** for: 1_sent_soiaf_model
+
+------------ found_tf_category
+                      found_tf   correct_tf      avg_tf   correct
+found_tf_category                                                
+1                    13.293103   420.931034  405.275862  0.137931
+2                    29.345114    33.827443  392.482328  0.977131
+3                    81.229117   339.815434  358.457239  0.483691
+4                   300.070446   404.376676  400.985486  0.519606
+5                   706.431174   685.891700  497.509362  0.957490
+6                  1537.286228  1376.149701  698.883234  0.817166
+found_tf_category
+1      58
+2     481
+3    1257
+4    5891
+5     988
+6    2505
+dtype: int64
+
+------------ avg_tf_category
+                    found_tf   correct_tf       avg_tf   correct
+avg_tf_category                                                 
+1                  10.000000    10.000000    15.250000  1.000000
+2                  63.000000    60.024390    40.591463  0.756098
+3                 132.689498   110.091324    79.426941  0.671233
+4                 383.229208   386.494389   301.308570  0.594158
+5                 845.295892   974.427457   685.192538  0.678887
+6                1158.443662  1208.727113  1149.614877  0.853873
+avg_tf_category
+1       1
+2      41
+3     219
+4    6505
+5    3846
+6     568
+dtype: int64
+
+------------ correct_tf_category
+                        found_tf   correct_tf      avg_tf   correct
+correct_tf_category                                                
+1                     191.180000     8.140000  204.355000  0.160000
+2                     122.554131    31.142450  348.655271  0.669516
+3                     210.850492    81.635631  314.445166  0.544315
+4                     340.156930   283.829774  394.385778  0.616640
+5                     566.839447   708.311485  488.237974  0.568851
+6                    1293.314829  1592.631520  704.708737  0.762668
+correct_tf_category
+1      50
+2     702
+3    1117
+4    4964
+5    1663
+6    2684
+dtype: int64
+
+Total values of accuracy per **found_tf_category** category for: 1_sent_soiaf_model
+                      found_tf   correct_tf      avg_tf   correct
+found_tf_category                                                
+1                    13.293103   420.931034  405.275862  0.137931
+2                    29.345114    33.827443  392.482328  0.977131
+3                    81.229117   339.815434  358.457239  0.483691
+4                   300.070446   404.376676  400.985486  0.519606
+5                   706.431174   685.891700  497.509362  0.957490
+6                  1537.286228  1376.149701  698.883234  0.817166
+
+Total values of accuracy per **avg_tf_category** category for: 1_sent_soiaf_model
+                    found_tf   correct_tf       avg_tf   correct
+avg_tf_category                                                 
+1                  10.000000    10.000000    15.250000  1.000000
+2                  63.000000    60.024390    40.591463  0.756098
+3                 132.689498   110.091324    79.426941  0.671233
+4                 383.229208   386.494389   301.308570  0.594158
+5                 845.295892   974.427457   685.192538  0.678887
+6                1158.443662  1208.727113  1149.614877  0.853873
+
+Total values of accuracy per **correct_tf_category** category for: 1_sent_soiaf_model
+                        found_tf   correct_tf      avg_tf   correct
+correct_tf_category                                                
+1                     191.180000     8.140000  204.355000  0.160000
+2                     122.554131    31.142450  348.655271  0.669516
+3                     210.850492    81.635631  314.445166  0.544315
+4                     340.156930   283.829774  394.385778  0.616640
+5                     566.839447   708.311485  488.237974  0.568851
+6                    1293.314829  1592.631520  704.708737  0.762668
+{': Greyjoy clan': {'counts': 700, 'perc': 0.9328571428571428},
+ ': Lannister clan': {'counts': 700, 'perc': 0.9542857142857143},
+ ': Stark clan': {'counts': 1120, 'perc': 0.8169642857142857},
+ ': Targaryen clan': {'counts': 200, 'perc': 0.98},
+ ': Westeros cities': {'counts': 80, 'perc': 0.75},
+ ': archmaesters': {'counts': 20, 'perc': 1.0},
+ ': bastards': {'counts': 100, 'perc': 0.59},
+ ': direwolves': {'counts': 20, 'perc': 0.95},
+ ': dragons': {'counts': 80, 'perc': 0.9875},
+ ': family-siblings': {'counts': 160, 'perc': 0.83125},
+ ': free cities': {'counts': 700, 'perc': 0.7057142857142857},
+ ': names-of-houses': {'counts': 7280, 'perc': 0.5256868131868132},
+ ': rivers': {'counts': 20, 'perc': 0.85},
+ 'TOTAL': {'counts': 11180, 'perc': 0.6386404293381037}}
+Number of tasks:       & 160 & 7280 & 1120 & 700 & 11180  \\ \hline 
+1_sent_soiaf_model                &  83.12 & 52.57 & 81.7 & 70.57 & 63.86  \\ 

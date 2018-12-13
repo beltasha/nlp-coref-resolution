@@ -1,0 +1,249 @@
+{'Fang': 112, 'Norris': 59, 'Hogsmeade': 150, 'Dolores': 41, 'Cho': 281, 'paper': 244, '::': 0, 'earth': 139, 'chair': 432, 'parchment': 257, 'Ravenclaw': 173, 'broomstick': 138, 'Angelina': 122, 'stairs': 441, 'McGonagall': 734, 'cloak': 312, 'Fred': 911, 'Marietta': 39, 'Snitch': 175, 'Phineas': 83, 'Winky': 160, 'James': 185, 'Michael': 26, 'Pansy': 60, 'courage': 48, 'ambition': 24, 'bravery': 12, 'Penelope': 10, 'Demelza': 16, 'Draco': 237, 'George': 777, 'Rubeus': 11, 'intelligence': 7, 'Tom': 135, 'spider': 136, 'Fleur': 246, 'air': 2937, 'quill': 164, 'Barty': 52, 'troll': 210, 'phoenix': 59, 'Viktor': 60, 'Kreacher': 310, 'Susan': 10, 'Luna': 342, 'Filch': 280, 'Terry': 13, 'Severus': 147, 'bird': 88, 'Neville': 775, 'Norbert': 37, 'centaur': 98, 'Lucius': 143, 'water': 361, 'Hokey': 19, 'Arthur': 150, 'witch': 455, 'Aragog': 49, 'Chang': 32, 'Azkaban': 178, 'Padma': 22, 'Expelliarmus': 26, 'Bludger': 119, 'Hagrid': 2038, 'Ron': 6373, 'Igor': 7, 'Fluffy': 27, 'Lavender': 136, 'Scabbers': 131, 'Slytherin': 473, 'Cornelius': 78, 'Pomfrey': 156, 'wizard': 943, 'Parvati': 130, 'scales': 23, 'cauldron': 134, 'patience': 18, 'wit': 7686, 'Cormac': 13, 'Hufflepuff': 148, 'Lily': 123, 'Sirius': 1124, 'Rita': 158, 'Minerva': 44, 'horse': 97, 'Crouch': 335, 'wand': 1872, 'Lovegood': 73, 'Anthony': 8, 'Hogwarts': 858, 'Cedric': 316, 'Nymphadora': 12, 'Justin': 48, 'fire': 582, 'Narcissa': 76, 'Dumbledore': 3358, 'Horace': 26, 'wisdom': 8, 'Roger': 20, 'Quaffle': 87, 'Harry': 18677, 'goblin': 221, 'Seamus': 180, 'cunning': 11, 'anxiety': 14, 'Trelawney': 250, 'ryffindor': 677, 'Durmstrang': 66, 'cat': 713, 'Colin': 72, 'Regulus': 53, 'Peter': 54, 'Ernie': 100, 'Remus': 59, 'veela': 38, 'rat': 2023, 'ink': 3192, 'Fudge': 469, 'Albus': 181, 'Fawkes': 64, 'Gryffindor': 677, 'daring': 31, 'Hannah': 26, 'Ginny': 770, 'Alicia': 53, 'Molly': 83, 'Blaise': 6, 'Millicent': 17, 'Snape': 1822, 'Marcus': 12, 'bottle': 206, 'charms': 24, 'loyalty': 14, 'Peeves': 159, 'Hermione': 5351, 'unicorn': 56, 'wind': 804, 'Gregory': 6, 'Flitwick': 137, 'Lee': 97, 'Bellatrix': 199, 'Zacharias': 35, 'Hedwig': 207, 'dog': 175, 'dragon': 240, 'Dobby': 466, 'Buckbeak': 128, 'Myrtle': 117, 'Ollivander': 118}
+
+**** Model: cleaned_hp_model  binary?: False
+**** Model: cleaned_hp_model  LOADED
+
+Total values of accuracy per **difficulty** category for: cleaned_hp_model
+               found_tf   correct_tf       avg_tf   correct
+difficulty
+1           1443.890168   550.349640  1016.466307  0.451319
+2           2403.016307  2336.928537  1463.111031  0.763070
+3            557.159233   229.113669   936.157314  0.828777
+4            899.156835   873.453237  1097.242206  0.889688
+
+Deeper look into difficulty data, here only check out data for difficulty level: 1
+task_type
+: Gryffindor-members              700
+: Gryffindor-traits                 5
+: Hagrid's-pets                    50
+: Hogwarts-houses                  20
+: Hufflepuff-members              100
+: Ravenclaw-students              280
+: Ravenclaw-traits                  5
+: Slytherin-members               350
+: Triwizard-champions              20
+: ball-types-used-in-Quidditch      5
+: death-eaters                     20
+: elves                            20
+: family-members                  110
+: half-blood wizards                5
+: magic-creatures                 175
+: only-child-in-family             50
+: professors                      100
+: wizarding-equipment              20
+: wizards-animagi                  50
+Name: correct, dtype: int64
+                                   found_tf   correct_tf       avg_tf   correct
+task_type
+: Gryffindor-members            2860.628571   415.000000  1811.950000  0.541429
+: Gryffindor-traits               27.200000    16.200000    26.800000  0.000000
+: Hagrid's-pets                  191.720000   195.000000   101.700000  0.900000
+: Hogwarts-houses                267.800000   267.800000   342.762500  1.000000
+: Hufflepuff-members             200.570000   138.400000   101.475000  0.310000
+: Ravenclaw-students             143.764286    87.000000    61.031250  0.367857
+: Ravenclaw-traits                15.800000    15.800000  1929.200000  1.000000
+: Slytherin-members              121.205714    82.600000    85.739286  0.365714
+: Triwizard-champions           2346.250000  6282.600000  5189.212500  0.450000
+: ball-types-used-in-Quidditch   324.600000   324.200000   176.300000  0.800000
+: death-eaters                  4049.300000  3998.200000  1092.550000  0.700000
+: elves                           81.800000    81.800000   199.512500  1.000000
+: family-members                1502.772727   726.236364  1432.479545  0.627273
+: half-blood wizards            1215.000000  1905.000000  6528.500000  0.000000
+: magic-creatures                268.297143   627.000000   255.535714  0.137143
+: only-child-in-family          5570.200000  1379.400000  4152.150000  0.180000
+: professors                    1062.920000   262.600000  1108.025000  0.560000
+: wizarding-equipment           1441.900000   877.200000   647.925000  0.050000
+: wizards-animagi               2540.780000  5076.400000  1503.850000  0.480000
+
+Deeper look into difficulty data, here check out data for all difficulty levels
+                                      found_tf   correct_tf       avg_tf   correct
+task_type              difficulty
+: Gryffindor-members   1           2860.628571   415.000000  1811.950000  0.541429
+                       2            993.364286   157.200000  1747.500000  0.828571
+                       3            936.678571    98.800000  1732.900000  0.831429
+                       4            692.908571   560.000000  1848.200000  0.990000
+: Gryffindor-traits    1             27.200000    16.200000    26.800000  0.000000
+                       2           6155.400000  6155.400000  1561.600000  1.000000
+                       3           1188.000000  1188.000000   319.750000  1.000000
+                       4            176.200000   175.400000    66.600000  0.800000
+: Hagrid's-pets        1            191.720000   195.000000   101.700000  0.900000
+                       2            176.880000   168.400000    95.050000  0.800000
+                       3            102.860000   120.600000    83.100000  0.540000
+                       4           1448.600000  1448.600000   415.100000  1.000000
+: Hogwarts-houses      1            267.800000   267.800000   342.762500  1.000000
+                       2           2571.200000  2571.200000   918.612500  1.000000
+                       3             70.600000    70.600000   293.462500  1.000000
+                       4            475.000000   475.000000   394.562500  1.000000
+: Hufflepuff-members   1            200.570000   138.400000   101.475000  0.310000
+                       2            192.470000   157.200000   106.175000  0.780000
+                       3            115.660000    70.600000    84.525000  0.790000
+                       4            453.810000   475.000000   185.625000  0.880000
+: Ravenclaw-students   1            143.764286    87.000000    61.031250  0.367857
+                       2           6309.500000  6416.400000  1643.381250  0.896429
+                       3            188.000000   188.000000    86.281250  1.000000
+                       4            126.521429   120.600000    69.431250  0.960714
+: Ravenclaw-traits     1             15.800000    15.800000  1929.200000  1.000000
+                       2           3833.800000  3833.800000  2883.700000  1.000000
+                       3           1134.800000  1134.800000  2208.950000  1.000000
+                       4           1412.200000  1412.200000  2278.300000  1.000000
+: Slytherin-members    1            121.205714    82.600000    85.739286  0.365714
+                       2           3309.142857  5199.400000  1364.939286  0.760000
+...                                        ...          ...          ...       ...
+: elves                3            307.400000   307.400000   255.912500  1.000000
+                       4            475.000000   475.000000   297.812500  1.000000
+: family-members       1           1502.772727   726.236364  1432.479545  0.627273
+                       2           2065.854545   437.618182  1360.325000  0.709091
+                       3            494.763636   438.445455  1360.531818  0.990909
+                       4            132.909091   131.890909  1283.893182  0.990909
+: half-blood wizards   1           1215.000000  1905.000000  6528.500000  0.000000
+                       2           1215.000000    95.400000  6076.100000  0.000000
+                       3           1196.200000   146.800000  6088.950000  0.200000
+                       4            794.400000  1448.600000  6414.400000  0.600000
+: magic-creatures      1            268.297143   627.000000   255.535714  0.137143
+                       2           1002.137143  1095.600000   372.685714  0.645714
+                       3            466.285714   465.800000   215.235714  0.971429
+                       4           5007.600000  5318.400000  1428.385714  0.908571
+: only-child-in-family 1           5570.200000  1379.400000  4152.150000  0.180000
+                       2            996.260000    81.800000  3827.750000  0.520000
+                       3            246.400000   120.600000  3837.450000  0.880000
+                       4            565.940000   560.000000  3947.300000  0.940000
+: professors           1           1062.920000   262.600000  1108.025000  0.560000
+                       2           5021.890000  6282.600000  2613.025000  0.660000
+                       3            590.980000   188.000000  1089.375000  0.770000
+                       4           1706.760000  1692.200000  1465.425000  0.990000
+: wizarding-equipment  1           1441.900000   877.200000   647.925000  0.050000
+                       2           1002.750000   129.600000   461.025000  0.500000
+                       3           1256.100000   964.600000   669.775000  0.600000
+                       4            200.800000   200.800000   478.825000  1.000000
+: wizards-animagi      1           2540.780000  5076.400000  1503.850000  0.480000
+                       2            311.220000   198.400000   284.350000  0.220000
+                       3            274.820000   324.200000   315.800000  0.740000
+                       4            563.240000   560.000000   374.750000  0.880000
+
+[76 rows x 4 columns]
+
+df.describe -- closer statistical look at global data
+           found_tf    correct_tf       avg_tf      correct
+count   8340.000000   8340.000000  8340.000000  8340.000000
+mean    1325.805635    997.461271  1128.244215     0.733213
+std     3676.296610   3044.812454  1739.103102     0.442306
+min        6.000000      6.000000    10.250000     0.000000
+25%      112.000000     60.000000   108.250000     0.000000
+50%      199.000000    178.000000   269.000000     1.000000
+75%      473.000000    455.000000  1579.875000     1.000000
+max    18677.000000  18677.000000  9479.000000     1.000000
+Number of categories 19
+correlation between difficulty and correct result 0.34905464714303064
+correlation between correct-term frequency and correctness 0.049411695506711165
+correlation between   found-term frequency and correctness -0.10714966266569305
+correlation between average term frequency and correctness 0.0007904561249060238
+correlation between frequency bin and correctness 0.03268033238643884
+correlation between avg_frequency bin and correctness 0.10759725293346342
+
+***************************************************Total values of accuracy per **tf_category** for: cleaned_hp_model
+
+------------ found_tf_category
+                      found_tf   correct_tf       avg_tf   correct
+found_tf_category
+1                    11.842105   573.210526   711.442434  0.536184
+2                    35.769495   245.438073   747.886181  0.736239
+3                    65.795531   313.184358   717.887430  0.634637
+4                   226.489027   348.438216   936.716901  0.779580
+5                   810.159830   647.797737   788.047737  0.751061
+6                  6891.471533  4183.651825  2492.514781  0.688321
+found_tf_category
+1     304
+2     872
+3     895
+4    4192
+5     707
+6    1370
+dtype: int64
+
+------------ avg_tf_category
+                    found_tf   correct_tf       avg_tf   correct
+avg_tf_category
+1                  25.484848    21.590909    17.170455  0.409091
+2                  57.751592    49.494692    33.663482  0.617834
+3                 129.855094    98.861132    78.699057  0.608302
+4                 319.738520   321.263235   224.288827  0.774495
+5                1176.755963  1186.809174   662.601376  0.803670
+6                3628.385044  2552.859586  3245.954853  0.757757
+avg_tf_category
+1      66
+2     471
+3    1325
+4    3419
+5     545
+6    2514
+dtype: int64
+
+------------ correct_tf_category
+                        found_tf   correct_tf       avg_tf   correct
+correct_tf_category
+1                    1157.778261    11.895652   732.036957  0.354348
+2                     295.722791    35.625116   753.153256  0.597209
+3                     850.248864    65.090909   931.798580  0.645455
+4                     821.273141   235.384173  1085.538309  0.783693
+5                     740.676647   798.615269   569.235404  0.794910
+6                    5095.712052  6166.284269  2333.259660  0.867525
+correct_tf_category
+1     460
+2    1075
+3     880
+4    4170
+5     668
+6    1087
+dtype: int64
+
+Total values of accuracy per **found_tf_category** category for: cleaned_hp_model
+                      found_tf   correct_tf       avg_tf   correct
+found_tf_category
+1                    11.842105   573.210526   711.442434  0.536184
+2                    35.769495   245.438073   747.886181  0.736239
+3                    65.795531   313.184358   717.887430  0.634637
+4                   226.489027   348.438216   936.716901  0.779580
+5                   810.159830   647.797737   788.047737  0.751061
+6                  6891.471533  4183.651825  2492.514781  0.688321
+
+Total values of accuracy per **avg_tf_category** category for: cleaned_hp_model
+                    found_tf   correct_tf       avg_tf   correct
+avg_tf_category
+1                  25.484848    21.590909    17.170455  0.409091
+2                  57.751592    49.494692    33.663482  0.617834
+3                 129.855094    98.861132    78.699057  0.608302
+4                 319.738520   321.263235   224.288827  0.774495
+5                1176.755963  1186.809174   662.601376  0.803670
+6                3628.385044  2552.859586  3245.954853  0.757757
+
+Total values of accuracy per **correct_tf_category** category for: cleaned_hp_model
+                        found_tf   correct_tf       avg_tf   correct
+correct_tf_category
+1                    1157.778261    11.895652   732.036957  0.354348
+2                     295.722791    35.625116   753.153256  0.597209
+3                     850.248864    65.090909   931.798580  0.645455
+4                     821.273141   235.384173  1085.538309  0.783693
+5                     740.676647   798.615269   569.235404  0.794910
+6                    5095.712052  6166.284269  2333.259660  0.867525
+{': Gryffindor-members': {'counts': 2800, 'perc': 0.7978571428571428},
+ ': Gryffindor-traits': {'counts': 20, 'perc': 0.7},
+ ": Hagrid's-pets": {'counts': 200, 'perc': 0.81},
+ ': Hogwarts-houses': {'counts': 80, 'perc': 1.0},
+ ': Hufflepuff-members': {'counts': 400, 'perc': 0.69},
+ ': Ravenclaw-students': {'counts': 1120, 'perc': 0.80625},
+ ': Ravenclaw-traits': {'counts': 20, 'perc': 1.0},
+ ': Slytherin-members': {'counts': 1400, 'perc': 0.5721428571428572},
+ ': Triwizard-champions': {'counts': 80, 'perc': 0.6125},
+ ': ball-types-used-in-Quidditch': {'counts': 20, 'perc': 0.95},
+ ': death-eaters': {'counts': 80, 'perc': 0.7375},
+ ': elves': {'counts': 80, 'perc': 1.0},
+ ': family-members': {'counts': 440, 'perc': 0.8295454545454546},
+ ': half-blood wizards': {'counts': 20, 'perc': 0.2},
+ ': magic-creatures': {'counts': 700, 'perc': 0.6657142857142857},
+ ': only-child-in-family': {'counts': 200, 'perc': 0.63},
+ ': professors': {'counts': 400, 'perc': 0.745},
+ ': wizarding-equipment': {'counts': 80, 'perc': 0.5375},
+ ': wizards-animagi': {'counts': 200, 'perc': 0.58},
+ 'TOTAL': {'counts': 8340, 'perc': 0.7332134292565947}}
+Number of tasks:       & 440 & 2800 & 700 & 400 & 8340  \\ \hline
+cleaned_hp_model                &  82.95 & 79.79 & 66.57 & 74.5 & 73.32  \\

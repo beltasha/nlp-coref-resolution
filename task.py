@@ -31,7 +31,7 @@ def train_model(sentences):
 
 def train_and_save_model(book_name):
     print(book_name + ' train model start')
-    sentences = LineSentence(book_name +  "_replaced_corefs.txt")
+    sentences = LineSentence(book_name +  ".txt")
     model = train_model(sentences)
     print(book_name + ' trained')
     model.wv.save_word2vec_format(fname=book_name + "_model.model", binary=False)
@@ -72,10 +72,11 @@ if __name__ == "__main__":
     # train_and_save_model("1_sent_hp")
     # coref_replacing(text_hp, "4_sent_hp", sentence_count=4)
     # train_and_save_model("4_sent_hp")
+    train_and_save_model("cleaned_hp")
 
     #train on soiaf
     # coref_replacing(text_soiaf, "1_sent_soiaf", sentence_count=1)
     # train_and_save_model("1_sent_soiaf")
-    coref_replacing(text_soiaf, "4_sent_soiaf", sentence_count=4)
-    train_and_save_model("4_sent_soiaf")
-
+    #coref_replacing(text_soiaf, "4_sent_soiaf", sentence_count=4)
+    #train_and_save_model("4_sent_soiaf")
+    train_and_save_model("cleaned_soiaf")

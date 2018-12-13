@@ -1,0 +1,58 @@
+**** Model: cleaned_soiaf_fasttext_model  binary?: False
+**** Model: cleaned_soiaf_fasttext_model  LOADED
+
+
+
+        Section: firstname-lastname
+
+        Section: child-father
+
+        Section: bastard-child-father
+
+        Section: husband-wife
+
+        Section: geo-name-location
+
+        Section: houses-seats
+
+        Section: name-animal-type
+
+        Section: Sigil_animal-house
+
+        Section: total
+{'Sigil_animal-house': {'correct': 1,
+                        'counts': '42',
+                        'incorrect': 41,
+                        'perc': 0.023809523809523808},
+ 'bastard-child-father': {'correct': 0,
+                          'counts': '6',
+                          'incorrect': 6,
+                          'perc': 0.0},
+ 'child-father': {'correct': 8,
+                  'counts': '180',
+                  'incorrect': 172,
+                  'perc': 0.044444444444444446},
+ 'firstname-lastname': {'correct': 315,
+                        'counts': '2368',
+                        'incorrect': 2053,
+                        'perc': 0.13302364864864866},
+ 'geo-name-location': {'correct': 1,
+                       'counts': '168',
+                       'incorrect': 167,
+                       'perc': 0.005952380952380952},
+ 'houses-seats': {'correct': 3, 'counts': '30', 'incorrect': 27, 'perc': 0.1},
+ 'husband-wife': {'correct': 2,
+                  'counts': '30',
+                  'incorrect': 28,
+                  'perc': 0.06666666666666667},
+ 'name-animal-type': {'correct': 0,
+                      'counts': '24',
+                      'incorrect': 24,
+                      'perc': 0.0},
+ 'total': {'correct': 330,
+           'counts': '2848',
+           'incorrect': 2518,
+           'perc': 0.11587078651685394}}
+Number of sections: 8
+Number of tasks:       & 2368 & 180 & 30 & 168 & 30 & 2848  \\ \hline
+cleaned_soiaf_fasttext_model                &  13.3 & 4.44 & 6.67 & 0.6 & 10.0 & 11.59  \\
