@@ -1,0 +1,98 @@
+current_doc_mains: ['Harry ', 'They ', 'Snape ']
+gold_main Harry
+Found cluster main: Harry
+P, R, F1: 0.6666666666666666 1.3333333333333333 0.8888888888888888
+[(3, 0.6666666666666666, 1.3333333333333333, 0.8888888888888888)]
+b3_avg 0.8888888888888888
+b3_weighted 0.8888888888888888
+
+current_doc_mains: ['the Ministry ', 'Mr. Malfoy ', 'a roll of parchment ']
+gold_main Mr. Borgin
+gold_main Mr. Malfoy
+Found cluster main: Mr. Malfoy
+P, R, F1: 0.5 0.5 0.5
+[(2, 0, 0, 0), (2, 0.5, 0.5, 0.5)]
+b3_avg 0.25
+b3_weighted 0.25
+
+current_doc_mains: ['he ']
+gold_main
+[(0, 0, 0, 0)]
+b3_avg 0.0
+task13.py:51: RuntimeWarning: invalid value encountered in long_scalars
+  b3_weighted = np.sum([f1*len_gold/total_num_gold for len_gold,_,_,f1 in cluster_results])
+b3_weighted nan
+
+current_doc_mains: ['“ Harry ']
+gold_main
+[(0, 0, 0, 0)]
+b3_avg 0.0
+b3_weighted nan
+
+current_doc_mains: ['Harry ', 'the hospital wing ']
+gold_main Harry
+Found cluster main: Harry
+P, R, F1: 0.5714285714285714 1.3333333333333333 0.8
+[(3, 0.5714285714285714, 1.3333333333333333, 0.8)]
+b3_avg 0.8
+b3_weighted 0.8000000000000002
+
+current_doc_mains: ['Harry , Ron , and Hermione ', 'the man dueling Percy ']
+gold_main Harry , Ron , and Hermione
+Found cluster main: Harry , Ron , and Hermione
+P, R, F1: 1.0 1.0 1.0
+[(2, 1.0, 1.0, 1.0)]
+b3_avg 1.0
+b3_weighted 1.0
+
+current_doc_mains: ['” ']
+gold_main
+[(0, 0, 0, 0)]
+b3_avg 0.0
+b3_weighted nan
+
+current_doc_mains: ['” ', 'the Dark Lord ']
+gold_main Potter
+[(2, 0, 0, 0)]
+b3_avg 0.0
+b3_weighted 0.0
+
+current_doc_mains: ['the table ', 'The great snake ', 'the Death Eaters ']
+gold_main
+[(0, 0, 0, 0)]
+b3_avg 0.0
+b3_weighted nan
+
+current_doc_mains: ['Harry ', 'Hermione ', 'the book ']
+gold_main Hermione
+Found cluster main: Hermione
+P, R, F1: 1.0 1.0 1.0
+[(3, 1.0, 1.0, 1.0)]
+b3_avg 1.0
+b3_weighted 1.0
+
+current_doc_mains: ['him ', 'Dumbledore ']
+gold_main
+[(0, 0, 0, 0)]
+b3_avg 0.0
+b3_weighted nan
+
+current_doc_mains: ['Harry ']
+gold_main Harry
+Found cluster main: Harry
+P, R, F1: 1.0 1.0 1.0
+[(2, 1.0, 1.0, 1.0)]
+b3_avg 1.0
+b3_weighted 1.0
+
+current_doc_mains: ['him ']
+gold_main Hagrid
+[(2, 0, 0, 0)]
+b3_avg 0.0
+b3_weighted 0.0
+
+current_doc_mains: ['Harry ']
+gold_main Kreacher
+[(2, 0, 0, 0)]
+b3_avg 0.0
+b3_weighted 0.0
