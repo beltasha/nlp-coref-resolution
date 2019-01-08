@@ -1,3 +1,12 @@
+current_doc_mains: ['Harry ']
+gold_main Harry
+Found cluster main: Harry
+P, R, F1: 0.75 3.0 1.2
+gold_main Sirius
+[(2, 0.75, 3.0, 1.2), (2, 0, 0, 0)]
+b3_avg 0.6
+b3_weighted 0.6
+
 current_doc_mains: ['Harry ', 'They ', 'Snape ']
 gold_main Harry
 Found cluster main: Harry
@@ -5,6 +14,22 @@ P, R, F1: 0.6666666666666666 1.3333333333333333 0.8888888888888888
 [(3, 0.6666666666666666, 1.3333333333333333, 0.8888888888888888)]
 b3_avg 0.8888888888888888
 b3_weighted 0.8888888888888888
+
+current_doc_mains: ['James', 'it ', 'Sirius ']
+gold_main James
+Found cluster main: James
+P, R, F1: 0.1111111111111111 1.0 0.19999999999999998
+gold_main Lupin
+gold_main Harry
+gold_main Sirius
+Found cluster main: Sirius
+P, R, F1: 1.0 2.0 1.3333333333333333
+[(1, 0.1111111111111111, 1.0, 0.19999999999999998),
+ (3, 0, 0, 0),
+ (5, 0, 0, 0),
+ (1, 1.0, 2.0, 1.3333333333333333)]
+b3_avg 0.3833333333333333
+b3_weighted 0.15333333333333332
 
 current_doc_mains: ['the Ministry ', 'Mr. Malfoy ', 'a roll of parchment ']
 gold_main Mr. Borgin
@@ -15,19 +40,47 @@ P, R, F1: 0.5 0.5 0.5
 b3_avg 0.25
 b3_weighted 0.25
 
-current_doc_mains: ['he ']
-gold_main
-[(0, 0, 0, 0)]
-b3_avg 0.0
-task13.py:51: RuntimeWarning: invalid value encountered in long_scalars
-  b3_weighted = np.sum([f1*len_gold/total_num_gold for len_gold,_,_,f1 in cluster_results])
-b3_weighted nan
+current_doc_mains: ['Ron ', 'Harry ', 'this ', 'Friends ']
+gold_main Ron
+Found cluster main: Ron
+P, R, F1: 1.0 0.7142857142857143 0.8333333333333333
+gold_main Harry
+Found cluster main: Harry
+P, R, F1: 0.4 2.0 0.6666666666666667
+gold_main Lavender
+[(7, 1.0, 0.7142857142857143, 0.8333333333333333),
+ (1, 0.4, 2.0, 0.6666666666666667),
+ (2, 0, 0, 0)]
+b3_avg 0.5
+b3_weighted 0.6499999999999999
 
-current_doc_mains: ['“ Harry ']
-gold_main
-[(0, 0, 0, 0)]
-b3_avg 0.0
-b3_weighted nan
+current_doc_mains: ['” ', 'Hermione ', 'him ', 'How many people ', 'Crabbe ']
+gold_main Ron
+gold_main Hermione
+Found cluster main: Hermione
+P, R, F1: 1.0 2.0 1.3333333333333333
+gold_main Harry
+gold_main Crabbe
+Found cluster main: Crabbe
+P, R, F1: 1.0 2.0 1.3333333333333333
+[(3, 0, 0, 0),
+ (2, 1.0, 2.0, 1.3333333333333333),
+ (1, 0, 0, 0),
+ (1, 1.0, 2.0, 1.3333333333333333)]
+b3_avg 0.6666666666666666
+b3_weighted 0.5714285714285714
+
+current_doc_mains: ['Snape', 'her bag ', 'His black eyes ']
+gold_main Snape
+Found cluster main: Snape
+P, R, F1: 0.3333333333333333 0.6666666666666666 0.4444444444444444
+gold_main Hermione
+gold_main Harry
+[(3, 0.3333333333333333, 0.6666666666666666, 0.4444444444444444),
+ (3, 0, 0, 0),
+ (1, 0, 0, 0)]
+b3_avg 0.14814814814814814
+b3_weighted 0.19047619047619047
 
 current_doc_mains: ['Harry ', 'the hospital wing ']
 gold_main Harry
@@ -45,11 +98,55 @@ P, R, F1: 1.0 1.0 1.0
 b3_avg 1.0
 b3_weighted 1.0
 
-current_doc_mains: ['” ']
-gold_main
-[(0, 0, 0, 0)]
-b3_avg 0.0
-b3_weighted nan
+current_doc_mains: ['Snape ']
+gold_main Snape
+Found cluster main: Snape
+P, R, F1: 0.7142857142857143 0.8333333333333334 0.7692307692307692
+gold_main Narcissa
+gold_main Wormtail
+[(6, 0.7142857142857143, 0.8333333333333334, 0.7692307692307692),
+ (5, 0, 0, 0),
+ (1, 0, 0, 0)]
+b3_avg 0.2564102564102564
+b3_weighted 0.3846153846153846
+
+current_doc_mains: ['Krum ', 'Harry ', 'Cedric']
+gold_main Krum
+Found cluster main: Krum
+P, R, F1: 1.0 1.0 1.0
+gold_main Harry
+Found cluster main: Harry
+P, R, F1: 0.5 2.0 0.8
+gold_main Cedric
+Found cluster main: Cedric
+P, R, F1: 1.0 0.6666666666666666 0.8
+[(3, 1.0, 1.0, 1.0), (1, 0.5, 2.0, 0.8), (3, 1.0, 0.6666666666666666, 0.8)]
+b3_avg 0.8666666666666667
+b3_weighted 0.8857142857142857
+
+current_doc_mains: ['Aunt Petunia ', 'Dudley', 'the silence', 'Harry ']
+gold_main Petunia
+gold_main Dudley
+Found cluster main: Dudley
+P, R, F1: 1.0 2.0 1.3333333333333333
+gold_main Vernon
+gold_main Harry
+Found cluster main: Harry
+P, R, F1: 1.0 1.5 1.2
+[(4, 0, 0, 0),
+ (2, 1.0, 2.0, 1.3333333333333333),
+ (1, 0, 0, 0),
+ (2, 1.0, 1.5, 1.2)]
+b3_avg 0.6333333333333333
+b3_weighted 0.5629629629629629
+
+current_doc_mains: ['Harry ']
+gold_main Harry
+Found cluster main: Harry
+P, R, F1: 1.0 1.75 1.2727272727272727
+[(4, 1.0, 1.75, 1.2727272727272727)]
+b3_avg 1.2727272727272727
+b3_weighted 1.2727272727272727
 
 current_doc_mains: ['” ', 'the Dark Lord ']
 gold_main Potter
@@ -57,11 +154,21 @@ gold_main Potter
 b3_avg 0.0
 b3_weighted 0.0
 
-current_doc_mains: ['the table ', 'The great snake ', 'the Death Eaters ']
-gold_main
-[(0, 0, 0, 0)]
-b3_avg 0.0
-b3_weighted nan
+current_doc_mains: ['Harry ', '’d ', 'Hermione ']
+gold_main Harry
+Found cluster main: Harry
+P, R, F1: 1.0 3.6666666666666665 1.5714285714285716
+gold_main Hermione
+Found cluster main: Hermione
+P, R, F1: 1.0 1.3333333333333333 1.142857142857143
+gold_main Ginny
+gold_main Sirius
+[(3, 1.0, 3.6666666666666665, 1.5714285714285716),
+ (3, 1.0, 1.3333333333333333, 1.142857142857143),
+ (1, 0, 0, 0),
+ (1, 0, 0, 0)]
+b3_avg 0.6785714285714286
+b3_weighted 1.017857142857143
 
 current_doc_mains: ['Harry ', 'Hermione ', 'the book ']
 gold_main Hermione
@@ -70,12 +177,6 @@ P, R, F1: 1.0 1.0 1.0
 [(3, 1.0, 1.0, 1.0)]
 b3_avg 1.0
 b3_weighted 1.0
-
-current_doc_mains: ['him ', 'Dumbledore ']
-gold_main
-[(0, 0, 0, 0)]
-b3_avg 0.0
-b3_weighted nan
 
 current_doc_mains: ['Harry ']
 gold_main Harry
@@ -96,3 +197,14 @@ gold_main Kreacher
 [(2, 0, 0, 0)]
 b3_avg 0.0
 b3_weighted 0.0
+
+current_doc_mains: ['Harry ', 'the Dursleys’ car ']
+gold_main Harry
+Found cluster main: Harry
+P, R, F1: 1.0 1.0 1.0
+gold_main Dursley
+gold_main Petunia
+gold_main Dedalus
+[(2, 1.0, 1.0, 1.0), (2, 0, 0, 0), (1, 0, 0, 0), (1, 0, 0, 0)]
+b3_avg 0.25
+b3_weighted 0.3333333333333333

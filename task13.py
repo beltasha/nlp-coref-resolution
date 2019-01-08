@@ -2,7 +2,6 @@ import spacy
 nlp = spacy.load('en_coref_md') # or en_coref_lg
 
 def evaluate_clusters (current_doc, current_gold):
-    
     # clusters "mains" found by spacy
     current_doc_mains = [c.main.string for c in doc._.coref_clusters]
     print('\ncurrent_doc_mains:', current_doc_mains)
@@ -56,45 +55,57 @@ from pprint import pprint
 
 ## define the gold clusters for all your selected paragraphs
 gold_clusters = [
-    {'Harry': ['Harry', 'I']},
+    {'Harry': ['Harry', 'his'],
+     'Sirius': ['Sirius', 'his']},
     {'Harry': ['Harry', 'He', 'he']},
-    {'': []},
+    {'James': ['James'],
+     'Lupin': ['Lupin', 'he', 'himself'],
+     'Harry': ['Harry', 'he', 'He', 'his', 'him'],
+     'Sirius': ['Sirius']},
     {'Mr. Borgin': ['Mr. Borgin', 'You'],
      'Mr. Malfoy': ['Mr. Malfoy', 'I']},
-    {'': []},
-     {'': []},
-     {'': []},
+    {'Ron': ['Ron', 'I', 'him', 'He', 'he', 'his', 'you'],
+     'Harry': ['Harry'],
+     'Lavender': ['Lavender', 'Lav-Lav']},
+    {'Ron': ['Ron', 'him', 'he'],
+     'Hermione': ['Hermione', 'her'],
+     'Harry': ['Harry'],
+     'Crabbe': ['Crabbe']},
+    {'Snape': ['I', 'his', 'His'],
+     'Hermione': ['Hermione', 'her', 'I'],
+     'Harry': ['Harry']},
     {'Harry': ['Harry', 'He', 'he']},
     {'Harry , Ron , and Hermione': ['Harry , Ron , and Hermione', 'they']},
-     {'': []},
-     {'': []},
-     {'': []},
-     {'': []},
+    {'Snape': ['Snape', 'his', 'His', 'He', 'he', 'Severus'],
+     'Narcissa': ['Narcissa', 'her', 'you', 'She', 'I'],
+     'Wormtail': ['Wormtail']},
+    {'Krum': ['Krum', 'he', 'his'],
+     'Harry': ['Harry'],
+     'Cedric': ['Cedric', 'his', 'you']},
+    {'Petunia': ['Petunia', 'she', 'She', 'her'],
+     'Dudley': ['Dudley', 'his'],
+     'Vernon': ['Vernon'],
+     'Harry': ['Harry', 'his']
+    },
+    {'Harry': ['Harry', 'his', 'He', 'he']},
     {'Potter': ['Potter', 'you']},
-     {'': []},
-     {'': []},
+    {'Harry': ['Harry', 'he', 'his'],
+     'Hermione': ['Hermione', 'her', 'she'],
+     'Ginny': ['Ginny'],
+     'Sirius': ['Sirius']},
     {'Hermione': ['Hermione', 'She', 'she']},
-     {'': []},
-     {'': []},
-     {'': []},
     {'Harry': ['Harry', 'he']},
     {'Hagrid': ['Hagrid', 'he']},
     {'Kreacher': ['Kreacher', 'he']},
-     {'': []},
-     {'': []},
+    {'Harry': ['Harry', 'his'],
+     'Dursley': ['Dudley', 'Dursleys'],
+     'Petunia': ['Petunia'],
+     'Dedalus': ['Dedalus']},
 ]
 
 with open('hp_cleaned.txt', encoding='utf8') as f:
     content = f.readlines()
 
-
-
 for index, paragraph in enumerate(content, start=0):
-    # print(paragraph, index)
-    if index % 2 != 0:
-        continue
-
     doc = nlp(paragraph)
-    doc._.coref_clusters
-    if (doc._.coref_clusters):
-        evaluate_clusters(doc, gold_clusters[index//2])
+    evaluate_clusters(doc, gold_clusters[index])
