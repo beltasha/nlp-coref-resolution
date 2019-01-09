@@ -39,6 +39,7 @@ P, R, F1: 0.5 0.5 0.5
 [(2, 0, 0, 0), (2, 0.5, 0.5, 0.5)]
 b3_avg 0.25
 b3_weighted 0.25
+# TYPICAL ERROR: usually finds not only personal names (we detect only personal names in gold standard)
 
 current_doc_mains: ['Ron ', 'Harry ', 'this ', 'Friends ']
 gold_main Ron
@@ -188,15 +189,21 @@ b3_weighted 1.0
 
 current_doc_mains: ['him ']
 gold_main Hagrid
-[(2, 0, 0, 0)]
+gold_main Harry
+gold_main Ron
+gold_main Hermione
+[(2, 0, 0, 0), (1, 0, 0, 0), (1, 0, 0, 0), (1, 0, 0, 0)]
 b3_avg 0.0
 b3_weighted 0.0
 
 current_doc_mains: ['Harry ']
 gold_main Kreacher
-[(2, 0, 0, 0)]
-b3_avg 0.0
-b3_weighted 0.0
+gold_main Harry
+Found cluster main: Harry
+P, R, F1: 0.25 1.0 0.4
+[(3, 0, 0, 0), (1, 0.25, 1.0, 0.4)]
+b3_avg 0.2
+b3_weighted 0.1
 
 current_doc_mains: ['Harry ', 'the Dursleys’ car ']
 gold_main Harry
@@ -208,3 +215,10 @@ gold_main Dedalus
 [(2, 1.0, 1.0, 1.0), (2, 0, 0, 0), (1, 0, 0, 0), (1, 0, 0, 0)]
 b3_avg 0.25
 b3_weighted 0.3333333333333333
+
+# TYPICAL ERROR: word declination: Dursleys’ VS Dursley
+# TYPICAL ERROR: articles: the Dursleys VS Dursley
+# TYPICAL ERROR: usually finds not only personal names (we detect only personal names in gold standard)
+# TYPICAL ERROR: there are different symbols, that SpaCy thinks they could be names (current_doc_mains: ['” ', 'Hermione ', 'him ', 'How many people ', 'Crabbe '])
+# TYPICAL ERROR: sometimes thinks, that pronouns are the personal names (current_doc_mains: ['” ', 'Hermione ', 'him ', 'How many people ', 'Crabbe '), we suppose, it is because its location in the sentence.
+

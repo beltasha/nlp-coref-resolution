@@ -95,8 +95,14 @@ gold_clusters = [
      'Sirius': ['Sirius']},
     {'Hermione': ['Hermione', 'She', 'she']},
     {'Harry': ['Harry', 'he']},
-    {'Hagrid': ['Hagrid', 'he']},
-    {'Kreacher': ['Kreacher', 'he']},
+    {'Hagrid': ['Hagrid', 'he'],
+    'Harry': ['Harry'],
+    'Ron': ['Ron'],
+    'Hermione': ['Hermione']
+    },
+    {'Kreacher': ['Kreacher', 'he', 'He'],
+     'Harry': ['Harry']
+    },
     {'Harry': ['Harry', 'his'],
      'Dursley': ['Dudley', 'Dursleys'],
      'Petunia': ['Petunia'],
