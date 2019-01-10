@@ -7,21 +7,21 @@
   - https://github.com/gwohlgen/digitalhumanities_dataset_and_eval
 4. Evaluate with the given scripts from the repo 
   - doesnt_match_evaluation.py and analogies_evaluation.py
-##Project info
+## Project info
 The project is designed to automatically replace pronouns with proper names, with the possibility of subsequent conversion into a Word2vec or Fast text format model, collecting data on the number of substitutions.
 The project presents 2 main scripts:
 handle_paragraph_coref_replacement.py
 original_paragraph_coref_replacement.py
 
 
-#General principle:
+# General principle:
 - Division of the text into paragraphs and their preprocessing
 - Replacement pronouns
 - Statistics collection
 - Saving models
 
 
-##Requirements
+## Requirements
 - Python 3
 - Nltk
 - Spacy
@@ -29,7 +29,7 @@ original_paragraph_coref_replacement.py
 
 
 ## How to use this project
-#Handle_paragraph_coref_replacement.py
+# Handle_paragraph_coref_replacement.py
 Designed to replace pronouns with customizable number of sentences in one paragraph.
 Use the command line:
 Required:
@@ -41,7 +41,7 @@ Optional:
 "-fasttext" save the model in Fasttext format, output model name "output file name +_fasttext.model" in the same directory as script
 "-st" replacement statistics, information is contained at the end of the output file
 
-#Original_paragraph_coref_replacement.py
+# Original_paragraph_coref_replacement.py
 Designed to replace pronouns in texts separated by "/ n / n". Also you can choose number of random paragraphs with a optinal size. 
 Use the command line:
 Required:
