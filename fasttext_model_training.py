@@ -1,13 +1,9 @@
 import fasttext
-def train_model(book_name):
-    print(book_name + ' train model start')
-    fasttext.skipgram(book_name + ".txt", book_name + "_fasttext_model")
-    print(book_name + "_fasttext model saved")
 
-if __name__ == "__main__":
-    train_model("1_sent_hp_replaced_corefs")
-    train_model("4_sent_hp_replaced_corefs")
-    train_model("1_sent_soiaf_replaced_corefs")
-    train_model("4_sent_soiaf_replaced_corefs")
-    train_model("cleaned_hp")
-    train_model("cleaned_soiaf")
+
+def train_model(book_name):
+    print(book_name + ' fasttext model train start')
+    model_name = book_name.split('.')
+    fasttext.skipgram(book_name, model_name[0] + "_fasttext_model")
+    print(book_name + " fasttext model saved")
+
