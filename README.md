@@ -36,44 +36,45 @@ original_paragraph_coref_replacement.py
 Designed to replace pronouns with customizable number of sentences in one paragraph.
 
 Use the command line
+
 Required:
 
-"-in" input file file
+- "-in" input file file
 
-"-out" output file name
+- "-out" output file name
 
-"-pl" number of sentences in paragraph > 0
+- "-pl" number of sentences in paragraph > 0
 
 Optional:
 
-"-w2v" save model in Word2vec format, output model name "output file name + _w2v.model" in the same directory as script
+- "-w2v" save model in Word2vec format, output model name "output file name + _w2v.model" in the same directory as script
 
-"-fasttext" save the model in Fasttext format, output model name "output file name +_fasttext.model" in the same directory as script
+- "-fasttext" save the model in Fasttext format, output model name "output file name +_fasttext.model" in the same directory as script
 
-"-st" replacement statistics, information is contained at the end of the output file
+- "-st" replacement statistics, information is contained at the end of the output file
 
 ## Original_paragraph_coref_replacement.py
 Designed to replace pronouns in texts separated by "/ n / n". Also you can choose number of random paragraphs with a optinal size. 
 
-Use the command line:
+Use the command line
 
 Required:
 
-"-in" input file file
+- "-in" input file file
 
-"-out" output file name
+- "-out" output file name
 
 Optional:
 
-"-cp" number of randomly taken paragraphs
+- "-cp" number of randomly taken paragraphs
 
-"-w2v" save model in Word2vec format, output model name "output file name + _w2v.model" in the same directory as script
+- "-w2v" save model in Word2vec format, output model name "output file name + _w2v.model" in the same directory as script
 
-"-fasttext" save the model in Fasttext format, output model name "output file name +_fasttext.model" in the same directory as script
+- "-fasttext" save the model in Fasttext format, output model name "output file name +_fasttext.model" in the same directory as script
 
-"-st" replacement statistics, information is contained at the end of the output file
+- "-st" replacement statistics, information is contained at the end of the output file
 
-"-pl" minimal number of sentences in paragraph> 0
+- "-pl" minimal number of sentences in paragraph> 0
 
 
 
