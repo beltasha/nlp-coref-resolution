@@ -1,6 +1,8 @@
 import spacy
 nlp = spacy.load('en_coref_md') # or en_coref_lg
 
+IS_SPAN_CHECKING = True
+
 def evaluate_clusters (current_doc, current_gold):
     # clusters "mains" found by spacy
     current_doc_mains = [c.main.string for c in doc._.coref_clusters]
@@ -24,12 +26,17 @@ def evaluate_clusters (current_doc, current_gold):
                 found_cluster = cluster
             
         if gold_in_spacy:    
+
             ## precision: number of cluster_items which are in the gold cluster
-            ## TODO .. extend this to check for the spans of mentions
-            found_mentions = [mention for mention in found_cluster.mentions 
-                                  if mention.string.strip() in gold_mentions]
-                
-            # print('found_mentions', found_mentions)
+            
+            if (IS_SPAN_CHECKING):
+                found_mentions = [mention for mention in found_cluster.mentions 
+                                if mention.string.strip() in gold_mentions
+                                and mention.start in gold_mentions[mention.string.strip()]] # check for the spans of mentions
+            else:
+                found_mentions = [mention for mention in found_cluster.mentions 
+                                if mention.string.strip() in gold_mentions]
+            
             precision = len(found_mentions) / len(found_cluster.mentions)
             recall = len(found_mentions) / len(gold_mentions)
             f1 = 2* (precision*recall) / (precision + recall)
@@ -55,13 +62,10 @@ from pprint import pprint
 
 ## define the gold clusters for all your selected paragraphs
 gold_clusters = [
-    {'Harry': ['Harry', 'his'],
-     'Sirius': ['Sirius', 'his']},
-    {'Harry': ['Harry', 'He', 'he']},
+    {'Harry': ['Harry', 'He', 'his']},
     {'James': ['James'],
      'Lupin': ['Lupin', 'he', 'himself'],
-     'Harry': ['Harry', 'he', 'He', 'his', 'him'],
-     'Sirius': ['Sirius']},
+     'Harry': ['Harry', 'he', 'He', 'his', 'him']},
     {'Mr. Borgin': ['Mr. Borgin', 'You'],
      'Mr. Malfoy': ['Mr. Malfoy', 'I']},
     {'Ron': ['Ron', 'I', 'him', 'He', 'he', 'his', 'you'],
@@ -109,9 +113,22 @@ gold_clusters = [
      'Dedalus': ['Dedalus']},
 ]
 
+gold_clusters_with_spans = [
+    {'Harry': {'Harry': [6], 'He': [14, 27], 'his': [17]}},
+    {'James': {'James': [1]},
+     'Lupin': {'Lupin':[4], 'he':[11], 'himself':[21]},
+     'Harry': {'Harry':[31], 'he': [38], 'He': [45], 'his': [55], 'him': [62]}},
+]
+
+## define the gold clusters for all your selected paragraphs
 with open('hp_cleaned.txt', encoding='utf8') as f:
     content = f.readlines()
 
 for index, paragraph in enumerate(content, start=0):
     doc = nlp(paragraph)
-    evaluate_clusters(doc, gold_clusters[index])
+    if (IS_SPAN_CHECKING):
+        if (index <= len(gold_clusters_with_spans) - 1):
+            evaluate_clusters(doc, gold_clusters_with_spans[index])
+    else:
+        if (index <= len(gold_clusters) - 1):
+            evaluate_clusters(doc, gold_clusters[index])
