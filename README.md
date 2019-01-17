@@ -80,7 +80,8 @@ Optional:
 
 Evaluate trained model using [this project](https://github.com/gwohlgen/digitalhumanities_dataset_and_eval)
 
-# Statistics
+## Statistics
+Statistics is at the end of the output file
 
 - "replace_counts" number of replcements pronouns on proper names
 
