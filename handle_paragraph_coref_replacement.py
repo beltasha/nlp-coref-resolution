@@ -41,6 +41,8 @@ def replace_corefs(paragraph_list, statistics):
     print("Replacing corefs... Total number of paragraphs: " + str(paragraphs_len))
     counter = 1
     replaced_coref_counter = 0
+    error_main_mantion_pronoun = 0
+    error_mention_not_pronoun = 0
     for paragraph in paragraph_list:
 
         print("Processing paragraph " + str(counter) + "/" + str(paragraphs_len))
@@ -48,10 +50,17 @@ def replace_corefs(paragraph_list, statistics):
         result_text += spacy_result._.coref_resolved + " "
         counter += 1
         if statistics:
-            replaced_coref_counter += coref_statistics.count_of_replaced_pronouns(spacy_result)
+            result_stat = coref_statistics.count_of_replaced_pronouns(spacy_result)
+            replaced_coref_counter += result_stat[0]
+            error_main_mantion_pronoun += result_stat[1]
+            error_mention_not_pronoun += result_stat[2]
     if statistics:
-        result_text += "/n /n Count of raplced pronouns: " + str(replaced_coref_counter)
+        result_text += "/n /n Count of correct raplaced pronouns: " + str(replaced_coref_counter)
+        result_text += "/n Count of error: main mentions pronouns: " + str(error_main_mantion_pronoun)
+        result_text += "/n Count of error: mention not a pronoun: " + str(error_mention_not_pronoun)
         print("Count of raplced pronouns: " + str(replaced_coref_counter))
+        print("Count of error: main mentions pronouns: " + str(error_main_mantion_pronoun))
+        print("Count of error: mention not a pronoun: " + str(error_mention_not_pronoun))
     return result_text
 
 
