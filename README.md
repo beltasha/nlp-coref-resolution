@@ -80,11 +80,20 @@ Optional:
 
 Evaluate trained model using [this project](https://github.com/gwohlgen/digitalhumanities_dataset_and_eval)
 
+# Statistics
+
+- "replace_counts" number of replcements pronouns on proper names
+
+- "error_main_mantion_pronoun" number of error replcements pronouns on pronouns
+
+- "error_mentiont_not_pronoun" number not pronouns replacements
 
 # Results 
 Results for w2v in folder w2v_results
+
 Results for fasttext in folder w2v_fasttext
 
 # Settings
 w2v model training settings (min_count=5, size=300, workers=4, window=10, sg=1, negative=5)
+
 fasttext model training settings default
