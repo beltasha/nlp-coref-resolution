@@ -103,7 +103,7 @@ Statistics is at the end of the output file
 
  
 ## Conclusions
-Coref resolution results have strong dependences on text dividing. Good paragraphs dividing decreases number of errors for Coref resolution. It works better with text dividing by original paragraphs.
+Coref resolution results have strong dependences on text dividing. Good paragraphs dividing decreases number of errors for Coref resolution. It works better with text dividing by original paragraphs. The size of paragraps depends on text and its author, but if there are no paragraphs, the number of sentenses in paragraph should be between 4 and 50.
 
 We found some typical errors. For example, Spacy sometimes finds not only personal names (we detect only personal names in gold standard), or Spacy sometimes thinks, that pronouns are the personal names. More information you can find via the link above.
 
