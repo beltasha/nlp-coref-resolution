@@ -78,5 +78,16 @@ Statistics is at the end of the output file
 - `"error_mentiont_not_pronoun"` number not pronouns replacements
 
 ## Results 
+ Average frequences of terms in datasets before and after coref resolution
+ Harry Potter:
+ A song of ice and fire:
 
+ Analogies and doesn't matches average evaluation results
+ 
+ Correctness of the coref via B-cubed metric with and without checking the spans of the gold annotations
+ 
+ Errors analysys
+ 
+## Conclusions
+Coref resolution results have strong dependences on text dividing. Good paragraphs dividing decreases number of errors for Coref resolution. It works better with text dividing by original paragraphs
 
