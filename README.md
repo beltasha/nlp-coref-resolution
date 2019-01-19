@@ -1,6 +1,7 @@
 
 ## General principle:
-
+The task of the project is to find all expressions that refer to the same entity in a text. In other words the programm will detect a pronoun in a corpus and replace it with a related name. Futhermore, the next step will convert the preprocessed text into the Word2vec or Fast text format model. Afterwards evaluate the results. 
+The results are presented here: https://docs.google.com/spreadsheets/d/13vElCAhiOShK7PNgNVpLHSexgtcWHwIXFO4RRFOgGeU/edit#gid=909973966
 
 ## Requirements
 - [Python 3](https://www.python.org/)
