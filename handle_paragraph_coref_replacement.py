@@ -6,9 +6,10 @@ import fasttext_model_training
 import w2v_model_training
 import coref_statistics
 
+#Split and Clear text
 def get_splitted_text(text, sentence_count):
     sentence_list = sent_tokenize(text)
-    
+    #if 1 sentence need, return tokens list
     if sentence_count == 1:
         clear_paragraphs = []
         for sentence in sentence_list:
@@ -19,6 +20,7 @@ def get_splitted_text(text, sentence_count):
     temp_paragraph = ""
     paragraph_list = []
     inner_counter = 0
+    # create and clean paragraphs
     for sentence in sentence_list:
         tokens = nltk.word_tokenize(sentence)
         clear_sentence = ""
@@ -35,6 +37,7 @@ def get_splitted_text(text, sentence_count):
 
 
 def replace_corefs(paragraph_list, statistics):
+    #replacing corefs with given paragraphs
     nlp = en_coref_lg.load()
     result_text = ""
     paragraphs_len = len(paragraph_list)
@@ -44,11 +47,11 @@ def replace_corefs(paragraph_list, statistics):
     error_main_mantion_pronoun = 0
     error_mention_not_pronoun = 0
     for paragraph in paragraph_list:
-
         print("Processing paragraph " + str(counter) + "/" + str(paragraphs_len))
         spacy_result = nlp(paragraph)
         result_text += spacy_result._.coref_resolved + " "
         counter += 1
+        #adding statistics to result file and print it to console
         if statistics:
             result_stat = coref_statistics.count_of_replaced_pronouns(spacy_result)
             replaced_coref_counter += result_stat[0]
@@ -65,13 +68,17 @@ def replace_corefs(paragraph_list, statistics):
 
 
 def coref_replacing(input_file, output_file, sentence_count, fast_text, word_2_vec, statistics):
+    #open main file
     text = open(input_file, 'r', encoding='utf8').read()
+    #splitting text to paragraphs
     book_paragraph_list = get_splitted_text(text, sentence_count)
     print(input_file + ' splitted')
+    #replacing corefs and adding statistics
     book_replaced_corefs = replace_corefs(book_paragraph_list, statistics)
     open(output_file, "w", encoding='utf-8').writelines(book_replaced_corefs)
     print(input_file + ' corefs replaced')
 
+    #saving models
     if fast_text:
         fasttext_model_training.train_model(output_file)
 
@@ -80,6 +87,7 @@ def coref_replacing(input_file, output_file, sentence_count, fast_text, word_2_v
 
 
 def create_parser():
+    # working with command lines
     main_parser = argparse.ArgumentParser()
     main_parser.add_argument('-in', '--input_fname', required=True)
     main_parser.add_argument('-out', '--output_fname', required=True)
@@ -91,6 +99,7 @@ def create_parser():
 
 
 if __name__ == "__main__":
+    # work with command line and start replacing with given param
     parser = create_parser()
     namespace = parser.parse_args()
     coref_replacing(namespace.input_fname, namespace.output_fname, namespace.paragraph_len,
