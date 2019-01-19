@@ -84,6 +84,10 @@ Statistics is at the end of the output file
  ![A song of ice and fire](https://github.com/beltasha/nlp-coref-resolution/blob/master/charts/A%20Song%20of%20Ice%20and%20Fire%20Frequence.png)
  
  Analogies and doesn't matches average evaluation results
+ ![Harry Potter analogies](https://github.com/beltasha/nlp-coref-resolution/blob/master/charts/Harry%20Potter.%20Analogies.png)
+ ![Harry Potter doesn't match](https://github.com/beltasha/nlp-coref-resolution/blob/master/charts/Harry%20Potter.%20Doesn't%20match.png)
+ ![A sonf of ice and fire analogies](https://github.com/beltasha/nlp-coref-resolution/blob/master/charts/A%20song%20of%20ice%20and%20fire.%20Analogies.png)
+ ![A sonf of ice and fire doesn't match](https://github.com/beltasha/nlp-coref-resolution/blob/master/charts/A%20song%20of%20ice%20and%20fire.%20Doesn't%20match.png)
  
  Correctness of the coref via B-cubed metric with and without checking the spans of the gold annotations
  
