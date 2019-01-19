@@ -79,9 +79,8 @@ Statistics is at the end of the output file
 
 ## Results 
  Average frequences of terms in datasets before and after coref resolution
- Harry Potter:
- A song of ice and fire:
-
+ ![Harry Potter](https://github.com/beltasha/nlp-coref-resolution/blob/master/charts/nlp-coref-resolution/charts/Harry Potter Frequence.png)
+ ![A song of ice and fire](https://github.com/beltasha/nlp-coref-resolution/blob/master/charts/nlp-coref-resolution/charts/A Song of Ice and Fire Frequence.png)
  Analogies and doesn't matches average evaluation results
  
  Correctness of the coref via B-cubed metric with and without checking the spans of the gold annotations
