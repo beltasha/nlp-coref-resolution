@@ -78,25 +78,25 @@ Statistics is at the end of the output file
 - `"error_mentiont_not_pronoun"` number not pronouns replacements
 
 ## Results 
- Average frequences of terms in datasets before and after coref resolution
+ **Average frequences of terms in datasets before and after coref resolution**
  
  ![Harry Potter](https://github.com/beltasha/nlp-coref-resolution/blob/master/charts/Harry%20Potter%20Frequence.png)
  ![A song of ice and fire](https://github.com/beltasha/nlp-coref-resolution/blob/master/charts/A%20Song%20of%20Ice%20and%20Fire%20Frequence.png)
  
- Analogies and doesn't matches average evaluation results
+ **Analogies and doesn't matches average evaluation results**
  
  ![Harry Potter analogies](https://github.com/beltasha/nlp-coref-resolution/blob/master/charts/Harry%20Potter.%20Analogies.png)
  ![Harry Potter doesn't match](https://github.com/beltasha/nlp-coref-resolution/blob/master/charts/Harry%20Potter.%20Doesn't%20match.png)
  ![A sonf of ice and fire analogies](https://github.com/beltasha/nlp-coref-resolution/blob/master/charts/A%20song%20of%20ice%20and%20fire.%20Analogies.png)
  ![A sonf of ice and fire doesn't match](https://github.com/beltasha/nlp-coref-resolution/blob/master/charts/A%20song%20of%20ice%20and%20fire.%20Doesn't%20match.png)
  
- Correctness of the coref via B-cubed metric with and without checking the spans of the gold annotations
+ **Correctness of the coref via B-cubed metric with and without checking the spans of the gold annotations**
  
  ![Without spans](https://github.com/beltasha/nlp-coref-resolution/blob/master/charts/b3_avg%20without%20spans%20%D0%B8%20b3_avg%20with%20spans.png)
  ![With spans](https://github.com/beltasha/nlp-coref-resolution/blob/master/charts/b3_weighted%20without%20spans%20%D0%B8%20b3_weighted%20with%20spans.png)
  ![Avg b3](https://github.com/beltasha/nlp-coref-resolution/blob/master/charts/Average%20values%20for%20B3%20metric.png)
  
- Errors analysys
+ **Errors analysys**
  
  ![Harry Potter](https://github.com/beltasha/nlp-coref-resolution/blob/master/charts/Harry%20Potter.%20Error%20statistics.png)
  ![A sonf of ice and fire](https://github.com/beltasha/nlp-coref-resolution/blob/master/charts/A%20song%20of%20ice%20and%20fire.%20Error%20statistics.png)
