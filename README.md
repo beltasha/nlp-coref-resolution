@@ -103,5 +103,9 @@ Statistics is at the end of the output file
 
  
 ## Conclusions
-Coref resolution results have strong dependences on text dividing. Good paragraphs dividing decreases number of errors for Coref resolution. It works better with text dividing by original paragraphs
+Coref resolution results have strong dependences on text dividing. Good paragraphs dividing decreases number of errors for Coref resolution. It works better with text dividing by original paragraphs.
+
+We found some typical errors. For example, Spacy sometimes finds not only personal names (we detect only personal names in gold standard), or Spacy sometimes thinks, that pronouns are the personal names. More information you can find via the link above.
+
+According to chart **Average frequences of terms in datasets before and after coref resolution** the frequences of the doesn’t match and analogies tasks slightly growing. But there are too many error replacements. So, we think, that the accuracy decreases. 
 
