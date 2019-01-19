@@ -19,19 +19,19 @@ Use the command line
 
 **Required:**
 
-- `` "-in" `` input file file
+- `` -in `` input file file
 
-- `` "-out" `` output file name
+- `` -out `` output file name
 
-- `` "-pl" `` number of sentences in paragraph > 0
+- `` -pl `` number of sentences in paragraph > 0
 
 **Optional:**
 
-- `` "-w2v" `` save model in Word2vec format, output model name "output file name + _w2v.model" in the same directory as script
+- `` -w2v `` save model in Word2vec format, output model name "output file name + _w2v.model" in the same directory as script
 
-- `` "-ft" `` save the model in Fasttext format, output model name "output file name +_fasttext.model" in the same directory as script
+- `` -ft `` save the model in Fasttext format, output model name "output file name +_fasttext.model" in the same directory as script
 
-- `` "-st" `` replacement statistics, information is contained at the end of the output file
+- `` -st `` replacement statistics, information is contained at the end of the output file
 
 **Example:**
 ```python
@@ -44,20 +44,20 @@ Use the command line
 
 **Required:**
 
-- `` "-in" `` input file file
+- `` -in `` input file file
 
-- `` "-out" `` output file name
+- `` -out `` output file name
 
 **Optional:**
 
-- `` "-pl" ``   minimal number of sentences in paragraph> 0
-- `` "-cp" `` number of randomly taken paragraphs
+- `` -pl ``   minimal number of sentences in paragraph> 0
+- `` -cp `` number of randomly taken paragraphs
 
-- `` "-w2v" `` save model in Word2vec format, output model name "output file name + _w2v.model" in the same directory as script
+- `` -w2v `` save model in Word2vec format, output model name "output file name + _w2v.model" in the same directory as script
 
-- `` "-ft"  ``save the model in Fasttext format, output model name "output file name +_fasttext.model" in the same directory as script
+- `` -ft  ``save the model in Fasttext format, output model name "output file name +_fasttext.model" in the same directory as script
 
-- `` "-st" `` replacement statistics, information is contained at the end of the output file
+- `` -st `` replacement statistics, information is contained at the end of the output file
 
 
 **Example:**
